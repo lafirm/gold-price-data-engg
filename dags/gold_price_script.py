@@ -81,11 +81,8 @@ def send_discord_message(df):
 
 if __name__ == '__main__':
     transformed_data = transform(goldrate_raw=extract_goldrate_data(), inr_data_raw=extract_inr_conv_rate())
-    date_code = str(datetime.now(tz=ist_tz).strftime("%Y%m%d"))
-    output_foldername = 'data'
-    if output_foldername not in os.listdir():
-        os.mkdir(output_foldername)
-    transformed_data.to_csv(f'{output_foldername}/gold_price_' + date_code + '.csv', index=None)
-    print('CSV created')
+    date_code = str(datetime.now(tz=ist_tz).strftime("%Y%m%d%H%M"))
+    transformed_data.to_csv(f'data/gold_price_{date_code}.csv', index=None)
+    print('CSV created!')
     load(transformed_data)
     send_discord_message(transformed_data)
