@@ -3,6 +3,20 @@ from datetime import datetime
 import gold_price_script as gs
 
 
+"""
+@classmethod
+@synchronized(lock)
+def foo(cls):
+    pass
+    
+is equal to
+
+def foo(cls):
+    pass
+foo = synchronized(lock)(foo)
+foo = classmethod(foo)
+"""
+
 @dag(schedule="@daily", start_date=datetime(2023, 1, 1), catchup=False, tags=["taskflow-api-demo"])
 def gold_price_dag() -> None:
     extract_goldrate_data = task(multiple_outputs=False)(gs.extract_goldrate_data)
