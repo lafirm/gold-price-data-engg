@@ -24,6 +24,7 @@ if you want to use your custom image using Dockerfile using `apache/airflow:2.6.
 
 ## Useful Resources:
 - [Taskflow API](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/taskflow.html)
+- [Python Decorators Doc](https://peps.python.org/pep-0318/)
 - [Airflow Docker Image](https://hub.docker.com/r/apache/airflow)
 - [Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
 - [Airflow Docs](https://airflow.apache.org/docs/apache-airflow/2.0.1/)
