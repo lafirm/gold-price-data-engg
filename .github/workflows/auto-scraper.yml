@@ -1,12 +1,12 @@
 name: Auto Scraper
 
-#on:
-#  workflow_dispatch     #to control the trigger only manually
+on:
+  workflow_dispatch     #to control the trigger only manually
 
-on:                      #to control the trigger manually and schedule jobs
-  workflow_dispatch:
-  schedule:
-    - cron: "50 6-16/9 * * *"
+# on:                      #to control the trigger manually and schedule jobs
+#  workflow_dispatch:
+#  schedule:
+#    - cron: "50 6-16/9 * * *"
 
 #permissions:
 #  contents: read   #to allow only reading contents
